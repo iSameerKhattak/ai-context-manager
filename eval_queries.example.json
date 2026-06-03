@@ -1,0 +1,38 @@
+[
+  {
+    "query": "how does the API authentication work?",
+    "relevant_chunk_ids": [],
+    "project_id": "<project-uuid>",
+    "metadata": {
+      "category": "auth",
+      "expected_doc_paths": ["services/api-gateway/app/api/deps.py"]
+    }
+  },
+  {
+    "query": "what embedding models are supported?",
+    "relevant_chunk_ids": [],
+    "project_id": "<project-uuid>",
+    "metadata": {
+      "category": "embeddings",
+      "expected_modules": ["contextclaw/embeddings/providers.py", "contextclaw/embeddings/router.py"]
+    }
+  },
+  {
+    "query": "how to add a new database migration?",
+    "relevant_chunk_ids": [],
+    "project_id": "<project-uuid>",
+    "metadata": {
+      "category": "database",
+      "expected_concepts": ["alembic", "migration"]
+    }
+  },
+  {
+    "query": "what is the schema for the chunks table?",
+    "relevant_chunk_ids": [],
+    "project_id": "<project-uuid>",
+    "metadata": {
+      "category": "database",
+      "expected_modules": ["contextclaw/db/models.py"]
+    }
+  }
+]

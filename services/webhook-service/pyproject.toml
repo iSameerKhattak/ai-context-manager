@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contextclaw-webhook-service"
+version = "0.1.0"
+description = "ContextClaw Webhook Service — receives and processes GitHub webhooks"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+dependencies = [
+    "contextclaw-shared",
+    "fastapi[standard]>=0.115,<1",
+    "uvicorn[standard]>=0.34,<1",
+    "httpx>=0.28,<1",
+    "pyjwt[crypto]>=2.10,<3",
+    "opentelemetry-distro[otlp]>=0.50b,<1",
+    "opentelemetry-instrumentation-fastapi>=0.50b,<1",
+]

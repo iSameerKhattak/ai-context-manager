@@ -1,0 +1,8 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "packages/sdk/*"
+  - "services/*"
+  - "services/workers/*"
+  - "extensions/*"
+  - "mcp-server"

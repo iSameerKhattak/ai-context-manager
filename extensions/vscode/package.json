@@ -1,0 +1,99 @@
+{
+  "name": "contextclaw-vscode",
+  "displayName": "ContextClaw",
+  "description": "Persistent context memory for your team and AI agents",
+  "version": "0.1.0",
+  "publisher": "contextclaw",
+  "private": true,
+  "license": "Proprietary",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": ["Chat", "Other"],
+  "activationEvents": [
+    "onStartupFinished",
+    "workspaceContains:**/.git"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "contextclaw.chat.open",
+        "title": "ContextClaw: Open Chat"
+      },
+      {
+        "command": "contextclaw.explain",
+        "title": "ContextClaw: Explain Selection"
+      },
+      {
+        "command": "contextclaw.memory.assert",
+        "title": "ContextClaw: Assert Fact..."
+      },
+      {
+        "command": "contextclaw.repo.resync",
+        "title": "ContextClaw: Resync Current Repo"
+      },
+      {
+        "command": "contextclaw.arch.open",
+        "title": "ContextClaw: Show Architecture"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "contextclaw",
+          "title": "ContextClaw",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "contextclaw": [
+        {
+          "type": "webview",
+          "id": "contextclaw.chat",
+          "name": "Chat"
+        },
+        {
+          "type": "webview",
+          "id": "contextclaw.context",
+          "name": "Context"
+        },
+        {
+          "type": "webview",
+          "id": "contextclaw.memory",
+          "name": "Memory"
+        },
+        {
+          "type": "webview",
+          "id": "contextclaw.architecture",
+          "name": "Architecture"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "ContextClaw",
+      "properties": {
+        "contextclaw.apiUrl": {
+          "type": "string",
+          "default": "https://api.contextclaw.dev/v1",
+          "description": "ContextClaw API base URL"
+        },
+        "contextclaw.projectId": {
+          "type": "string",
+          "default": "",
+          "description": "Default project ID for this workspace"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "dev": "tsc -watch -p ./",
+    "lint": "eslint src/"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.7.0"
+  }
+}
