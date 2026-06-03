@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/contextclaw_logo.png" alt="ContextClaw Logo" width="400">
+</p>
+
 # ContextClaw
 
 **AI-powered context management for development teams.** Automatically ingest GitHub repositories, chunk code with AST-level precision, store embeddings in a vector database, and enable hybrid search + RAG chat across your entire codebase.
